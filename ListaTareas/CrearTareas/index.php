@@ -23,6 +23,7 @@
         $tarea = $_POST['tarea'];   
         if(!empty($tarea)){
             require "../includes/connectDB.php";
+            //para agregar algo a la db
             $query = $conn->query("INSERT INTO tareas (titulo) VALUES ('$tarea')");
             if($query){
                 header("Location: ../index.php");
